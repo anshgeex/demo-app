@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'account-settings', component: TestComponent },
   { path: 'help', component: TestComponent },
   { path: 'dark-mode', component: TestComponent },
+  { path: '', redirectTo: 'overview', pathMatch: 'full' }
 ];
 
 @NgModule({
