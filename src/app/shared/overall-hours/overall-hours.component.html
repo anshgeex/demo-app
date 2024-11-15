@@ -1,0 +1,20 @@
+<div class="card-outer">
+    <div class="d-flex justify-content-between">
+        <h5 class="card-title">Overall Hours</h5>
+        <span class="viewall-btn"><mat-icon>drag_indicator</mat-icon></span>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6">
+            <div class="internal-card">
+                <ag-charts style="height: 100%" [options]="chartOptions">
+                </ag-charts>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-6">
+            <div class="internal-card">
+                <ag-charts style="height: 100%" [options]="barChartOptions">
+                </ag-charts>
+            </div>
+        </div>
+    </div>
+</div>

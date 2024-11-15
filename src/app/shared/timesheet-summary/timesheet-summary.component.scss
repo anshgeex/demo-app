@@ -1,0 +1,33 @@
+.timesheet-summary {
+  .count {
+    font-size: 22px;
+  }
+  .info-tag {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 3px 8px;
+    font-weight: 700;
+    font-size: 12px;
+    &.up {
+      background-color: #E9F8EE;
+      color:#53AF57;
+    }
+    &.down {
+      background-color: #F8E9E9;
+      color:#B14040;
+    }
+    .mat-icon {
+      height: 20px;
+      width: 23px;
+      font-size: 18px;
+    }
+  }
+  .text-remind {
+    text-decoration: underline;
+  }
+  .title {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

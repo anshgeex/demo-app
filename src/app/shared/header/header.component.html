@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+        <!-- Search Bar -->
+        <form class="d-flex me-auto ms-4" style="width: 300px;">
+            <mat-form-field appearance="outline" class="w-100 ms-3">
+                <mat-label>Search</mat-label>
+                <input class="custom-height" matInput type="text" placeholder="Search..." />
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </form>
+
+        <!-- Email Icon with Count -->
+        <div class="position-relative me-3 badges-div">
+            <button class="btn btn-light">
+                <mat-icon>email</mat-icon>
+            </button>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{ emailCount }}
+            </span>
+        </div>
+
+        <!-- Notification Icon with Count -->
+        <div class="position-relative  badges-div">
+            <button class="btn btn-light">
+                <mat-icon class="material-icons-outlined">notifications</mat-icon>
+            </button>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{ notificationCount }}
+            </span>
+        </div>
+
+        <!-- Fiscal Period Section -->
+        <div class="vertical-border mx-3"></div>
+        <mat-form-field appearance="outline" class="date-input">
+            <mat-label>Fiscal Period</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+                <input matStartDate [(ngModel)]="fiscalPeriod.start" placeholder="Start date">
+                <input matEndDate [(ngModel)]="fiscalPeriod.end" placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+
+    </div>
+</nav>

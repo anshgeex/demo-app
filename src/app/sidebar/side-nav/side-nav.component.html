@@ -1,0 +1,73 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" [opened]="opened">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" />
+    </div>
+    <div class="user-profile">
+      <div class="user-img">
+        <img src="assets/user-avatar.png" alt="User  Avatar" class="user-avatar" />
+      </div>
+      <div class="user-content">
+        <span class="user-name">John Doe</span>
+        <span class="designation">Admin</span>
+      </div>
+      <a mat-list-item class="down-arrow">
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </a>
+
+    </div>
+
+    <mat-nav-list class="navigation-wrap">
+      <h4 mat-subheader>General</h4>
+      <a class="active" mat-list-item (click)="navigateTo('overview')">
+        <mat-icon>home</mat-icon>
+        Overview </a>
+
+      <a mat-list-item (click)="navigateTo('navigation1')">
+        <mat-icon>store</mat-icon>
+        Navigation 2
+        <!-- <a mat-list-item  class="down-arrow">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+         </a> -->
+      </a>
+
+      <a mat-list-item (click)="navigateTo('navigation2')">
+        <mat-icon>description</mat-icon>
+        Navigation 3</a>
+      <a mat-list-item (click)="navigateTo('navigation2')">
+        <mat-icon>group</mat-icon>
+        Navigation 4</a>
+      <a mat-list-item (click)="navigateTo('navigation2')">
+        <mat-icon>show_chart</mat-icon>
+        Navigation 6</a>
+
+      <h4 mat-subheader>Tools</h4>
+      <a mat-list-item (click)="navigateTo('account-settings')">
+        <mat-icon>settings</mat-icon>
+        Account and Settings</a>
+
+      <a mat-list-item (click)="navigateTo('help')">
+        <mat-icon>help</mat-icon>
+        Help</a>
+
+      <a mat-list-item (click)="navigateTo('dark-mode')">
+        <mat-icon>dark_mode</mat-icon>
+        Dark Mode
+        <div class="toggle-btn"><mat-slide-toggle></mat-slide-toggle></div>
+      </a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-drawer-container>
+    <button class="btn sidebar-toggle-button" (click)="toggleSidebar()">
+      <!-- <mat-icon> multiple_stop </mat-icon> -->
+      <div class="rectangle">
+        <div class="square">
+          <span class="material-icons">arrow_back</span>
+        </div>
+      </div>
+    </button>
+    <!-- route content -->
+    <ng-content></ng-content>
+  </mat-drawer-container>
+</mat-sidenav-container>
