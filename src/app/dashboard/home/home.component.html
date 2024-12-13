@@ -2,7 +2,7 @@
     <div class="d-flex justify-content-between align-items-start mb-3">
         <div class="main-title-div">
             <h3 class="main-ttl">Welcome Back, John Doe!</h3>
-            <span class="text-badge grey-badge me-2">Jan 01, 2023 - Dec 31, 2023 </span>
+            <span class="text-badge grey-badge me-2">{{fiscalPeriod.start | date}} - {{fiscalPeriod.end | date}} </span>
         </div>
         <div class="refresh-btn cursor-pointer">
                 <mat-icon>refresh</mat-icon>

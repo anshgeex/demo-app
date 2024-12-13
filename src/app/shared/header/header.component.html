@@ -36,7 +36,7 @@
             <mat-label>Fiscal Period</mat-label>
             <mat-date-range-input [rangePicker]="picker">
                 <input matStartDate [(ngModel)]="fiscalPeriod.start" placeholder="Start date">
-                <input matEndDate [(ngModel)]="fiscalPeriod.end" placeholder="End date">
+                <input matEndDate [(ngModel)]="fiscalPeriod.end" (ngModelChange)="fiscalPeriodChange()" placeholder="End date">
             </mat-date-range-input>
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-date-range-picker #picker></mat-date-range-picker>
